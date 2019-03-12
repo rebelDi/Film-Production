@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="FilmProduction.jnlp">
+  <information>
+    <title>FilmProduction</title>
+    <vendor>Unknown</vendor>
+    <description>FilmProduction</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="FilmProduction.jar" size="321129" download="eager" />
+    <jar href="mysql-connector-java-5.1.44-bin.jar" size="999635" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="600" height="400" main-class="FilmProduction.Main"  name="FilmProduction" />
+  <update check="background"/>
+</jnlp>
