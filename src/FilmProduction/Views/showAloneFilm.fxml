@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.17111853088480802" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" style="-fx-background-image: url(/FilmProduction/images/bkgd.jpg)" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FilmProduction.Controllers.filmShowController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="back" layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#button" prefHeight="25.0" prefWidth="177.0" text="Вернуться на главную" />
+            <Button fx:id="exitB" layoutX="6.0" layoutY="618.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="191.0" text="Выйти" />
+            <Button fx:id="cab" layoutX="6.0" layoutY="582.0" mnemonicParsing="false" onAction="#cabinet" prefHeight="30.0" prefWidth="191.0" text="Личный кабинет" />
+             <Button fx:id="adding" layoutX="12.0" layoutY="373.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="180.0" text="Добавить" />
+             <Text fx:id="adminInfo" layoutX="8.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Привилегии администратора" textAlignment="CENTER">
+                 <font>
+                     <Font size="14.0" />
+                 </font>
+             </Text>
+             <Button fx:id="deleting" layoutX="11.0" layoutY="405.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="180.0" text="Удалить" />
+             <Button fx:id="editing" layoutX="11.0" layoutY="439.0" mnemonicParsing="false" onAction="#edit" prefHeight="25.0" prefWidth="180.0" text="Редактировать" />
+             <Button fx:id="usersTime" layoutX="10.0" layoutY="472.0" mnemonicParsing="false" onAction="#users" prefHeight="25.0" prefWidth="182.0" text="Всё о пользователях" />
+            <Button fx:id="filmAct" layoutX="11.0" layoutY="505.0" mnemonicParsing="false" onAction="#filmA" prefHeight="25.0" prefWidth="180.0" text="Фильмы и Актёры" />
+         </children></AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Rectangle fx:id="rect" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="204.0" layoutX="507.0" layoutY="158.0" stroke="BLACK" strokeType="INSIDE" width="476.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="49.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="483.0" />
+            <Text fx:id="name" layoutX="13.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="483.13671875">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="36.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Режиссёр:">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+            <TableView fx:id="actors" layoutX="51.0" layoutY="100.0" prefHeight="255.0" prefWidth="408.0">
+               <columns>
+                  <TableColumn fx:id="actor" prefWidth="407.0" text="Актеры" />
+               </columns></TableView>
+            <Text fx:id="director" layoutX="111.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="288.0000114440918">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <GridPane alignment="CENTER" gridLinesVisible="true" layoutX="508.0" layoutY="14.0" prefHeight="120.0" prefWidth="476.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="242.0" minWidth="10.0" prefWidth="67.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="235.0" minWidth="0.0" prefWidth="161.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.0" minWidth="0.0" prefWidth="61.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="552.0" minWidth="10.0" prefWidth="183.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="29.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="29.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="48.0" minHeight="10.0" prefHeight="32.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="33.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="  Страна: ">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="country" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="160.515625" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Год:" textAlignment="CENTER" wrappingWidth="51.140625" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="year" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="182.515625" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Жанр:" textAlignment="CENTER" wrappingWidth="64.1171875" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="genre" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="162.00001001358032" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Время:" textAlignment="CENTER" wrappingWidth="63.6953125" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="time" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="183.515625" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Рейтинг:" textAlignment="CENTER" wrappingWidth="67.3125" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="rate" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="161.51562070846558" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Бюджет:" textAlignment="CENTER" wrappingWidth="69.2421875" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Оценка:" textAlignment="CENTER" wrappingWidth="61.828125" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="mark" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="184.2421919107437" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Сборы:" textAlignment="CENTER" wrappingWidth="61.7734375" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="budget" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="162.515625" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="money" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" textAlignment="CENTER" wrappingWidth="183.51560640335083" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+               </children>
+            </GridPane>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#8d8686" height="4.0" layoutX="14.0" layoutY="370.0" stroke="BLACK" strokeType="INSIDE" width="970.0" />
+            <TextField fx:id="review" layoutX="14.0" layoutY="417.0" prefHeight="35.0" prefWidth="804.0" promptText="                                                                                             Максимально можно ввести 50 символов">
+               <font>
+                  <Font size="11.0" />
+               </font></TextField>
+            <Button fx:id="addReview" layoutX="823.0" layoutY="417.0" mnemonicParsing="false" onAction="#addSomething" prefHeight="35.0" prefWidth="161.0" text="Добавить комментарий" />
+            <TableView fx:id="reviews" layoutX="14.0" layoutY="459.0" prefHeight="185.0" prefWidth="970.0">
+              <columns>
+                <TableColumn prefWidth="184.0" resizable="false" text="Пользователь" />
+                <TableColumn minWidth="0.0" prefWidth="785.0" resizable="false" text="Комментарий" />
+              </columns>
+            </TableView>
+            <Text fx:id="plot" layoutX="510.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="470.00001096725464" />
+            <Text layoutX="709.0" layoutY="154.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Описание">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <GridPane fx:id="grid" layoutX="257.0" layoutY="380.0" prefHeight="30.0" prefWidth="476.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="202.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="45.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="94.0" minWidth="0.0" prefWidth="45.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="116.0" minWidth="10.0" prefWidth="41.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="175.0" minWidth="10.0" prefWidth="46.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="231.0" minWidth="10.0" prefWidth="101.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="25.0" stroke="BLACK" strokeType="INSIDE" width="191.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Оставьте свою оценку:" textAlignment="CENTER" wrappingWidth="177.00001001358032">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="mark1" mnemonicParsing="false" onAction="#addSomething" style="-fx-background-color: red;" text="1" textAlignment="CENTER" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="mark2" mnemonicParsing="false" onAction="#addSomething" style="-fx-background-color: #ff6300;" text="2" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="mark3" mnemonicParsing="false" onAction="#addSomething" style="-fx-background-color: #ffd900;" text="3" GridPane.columnIndex="3">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="mark4" mnemonicParsing="false" onAction="#addSomething" style="-fx-background-color: #ccff00;" text="4" textAlignment="CENTER" GridPane.columnIndex="4">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="mark5" mnemonicParsing="false" onAction="#addSomething" style="-fx-background-color: #0cff3c;" text="5" GridPane.columnIndex="5">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Button>
+               </children>
+            </GridPane>
+         </children></AnchorPane>
+    </items>
+</SplitPane>

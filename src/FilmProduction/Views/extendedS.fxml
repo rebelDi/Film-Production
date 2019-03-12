@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.17111853088480802" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1200.0" style="-fx-background-image: url(/FilmProduction/images/bkgd.jpg)" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FilmProduction.Controllers.extendedSearchController">
+   <items>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Button fx:id="back" layoutX="12.0" layoutY="14.0" mnemonicParsing="false" onAction="#button" prefHeight="25.0" prefWidth="180.0" text="Вернуться на главную" />
+            <Button fx:id="exitB" layoutX="4.0" layoutY="617.0" mnemonicParsing="false" onAction="#exit" prefHeight="25.0" prefWidth="194.0" text="Выйти" />
+            <Button fx:id="cab" layoutX="4.0" layoutY="586.0" mnemonicParsing="false" onAction="#cabinet" prefHeight="25.0" prefWidth="194.0" text="Личный кабинет" />
+            <Button fx:id="adding" layoutX="12.0" layoutY="373.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="180.0" text="Добавить" />
+            <Text fx:id="adminInfo" layoutX="8.0" layoutY="358.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Привилегии администратора" textAlignment="CENTER">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Text>
+            <Button fx:id="deleting" layoutX="11.0" layoutY="405.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="180.0" text="Удалить" />
+            <Button fx:id="editing" layoutX="11.0" layoutY="439.0" mnemonicParsing="false" onAction="#edit" prefHeight="25.0" prefWidth="180.0" text="Редактировать" />
+            <Button fx:id="usersTime" layoutX="10.0" layoutY="472.0" mnemonicParsing="false" onAction="#users" prefHeight="25.0" prefWidth="182.0" text="Всё о пользователях" />
+            <Button fx:id="filmAct" layoutX="11.0" layoutY="508.0" mnemonicParsing="false" onAction="#filmA" prefHeight="25.0" prefWidth="182.0" text="Фильмы и Актёры" />
+         </children></AnchorPane>
+      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="30.0" layoutX="225.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" width="539.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="299.0" layoutX="225.0" layoutY="48.0" stroke="BLACK" strokeType="INSIDE" width="539.0" />
+            <Button fx:id="search" layoutX="410.0" layoutY="352.0" mnemonicParsing="false" onAction="#doSearch" prefHeight="25.0" prefWidth="171.0" text="Поиск" />
+            <Text layoutX="259.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Кого вы хотите найти?">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="year" layoutX="294.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Год выпуска">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="c" layoutX="427.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="с" />
+            <Text fx:id="to" layoutX="584.0" layoutY="137.0" strokeType="OUTSIDE" strokeWidth="0.0" text="по" />
+            <Text fx:id="genre" layoutX="317.0" layoutY="176.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Жанр">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="country" layoutX="312.0" layoutY="209.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Страна">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="budget" layoutX="309.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Бюджет">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="budgetF" layoutX="506.0" layoutY="222.0" />
+            <Text fx:id="money" layoutX="313.0" layoutY="272.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Сборы">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TextField fx:id="moneyF" layoutX="507.0" layoutY="254.0" />
+            <Text fx:id="rate" layoutX="309.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Рейтинг">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <Text fx:id="mark" layoutX="257.0" layoutY="330.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Оценка пользователей">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+            <TableView fx:id="table" layoutX="14.0" layoutY="384.0" prefHeight="259.0" prefWidth="966.0">
+               <columns>
+                  <TableColumn prefWidth="965.0" resizable="false" text="Результаты поиска" />
+               </columns>
+            </TableView>
+            <TextField fx:id="yearFrom" layoutX="464.0" layoutY="120.0" prefHeight="25.0" prefWidth="107.0" />
+            <TextField fx:id="yearAfter" layoutX="612.0" layoutY="120.0" prefHeight="25.0" prefWidth="107.0" />
+            <TextField fx:id="genreF" layoutX="506.0" layoutY="158.0" />
+            <TextField fx:id="countryF" layoutX="506.0" layoutY="191.0" />
+            <RadioButton fx:id="bB" layoutX="372.0" layoutY="223.0" mnemonicParsing="false" selected="true" text="&gt;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="bE" layoutX="411.0" layoutY="223.0" mnemonicParsing="false" text="=">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="bL" layoutX="459.0" layoutY="224.0" mnemonicParsing="false" text="&lt;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="mB" layoutX="372.0" layoutY="256.0" mnemonicParsing="false" selected="true" text="&gt;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="mE" layoutX="411.0" layoutY="256.0" mnemonicParsing="false" text="=">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="mL" layoutX="459.0" layoutY="256.0" mnemonicParsing="false" text="&lt;">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <GridPane layoutX="437.0" layoutY="309.0" prefHeight="30.0" prefWidth="139.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <RadioButton fx:id="markB" mnemonicParsing="false" prefHeight="17.0" prefWidth="38.0" selected="true" text="&gt;">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="markE" mnemonicParsing="false" prefHeight="17.0" prefWidth="38.0" text="=" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+                  <RadioButton fx:id="markL" mnemonicParsing="false" prefHeight="21.0" prefWidth="38.0" text="&lt;" GridPane.columnIndex="2">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </RadioButton>
+               </children>
+            </GridPane>
+            <TextField fx:id="markF" layoutX="576.0" layoutY="312.0" prefHeight="25.0" prefWidth="30.0" />
+            <RadioButton fx:id="film" layoutX="459.0" layoutY="17.0" mnemonicParsing="false" onAction="#viewChange" selected="true" text="Фильм" />
+            <RadioButton fx:id="actor" layoutX="561.0" layoutY="17.0" mnemonicParsing="false" onAction="#viewChange" text="Актера" />
+            <RadioButton fx:id="director" layoutX="665.0" layoutY="17.0" mnemonicParsing="false" onAction="#viewChange" text="Режиссера" />
+            <RadioButton fx:id="yes" layoutX="453.0" layoutY="159.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="107.0" text="Да" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <RadioButton fx:id="no" layoutX="565.0" layoutY="159.0" mnemonicParsing="false" text="Нет" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </RadioButton>
+            <Text fx:id="dateTip" fill="RED" layoutX="454.0" layoutY="155.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вы можете ввести дату в форматах: 'гггг-мм-дд' или 'гггг'" visible="false">
+               <font>
+                  <Font size="11.0" />
+               </font></Text>
+            <ChoiceBox fx:id="rating" layoutX="506.0" layoutY="285.0" prefWidth="150.0" />
+            <TextField fx:id="namy" layoutX="449.0" layoutY="80.0" prefHeight="25.0" prefWidth="264.0" />
+            <Text fx:id="names" layoutX="303.0" layoutY="98.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Название">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Text>
+         </children></AnchorPane>
+   </items>
+</SplitPane>
